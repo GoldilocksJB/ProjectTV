@@ -32,7 +32,7 @@ class Programm extends Component {
                 <div className = 'channels'>
               
                     {array.prog.map(el => 
-                    el.id < 6 ?
+                    el.id < 5 ?
                     <dl>
                         <div><dt>{el.time}</dt></div>
                         <div><dt>{el.name}</dt></div>
@@ -46,7 +46,7 @@ class Programm extends Component {
                     )
                     }
                    <button onClick={this.handleClick}>
-                            {this.state.isOpen ? 'close' : 'open'}
+                            {this.state.isOpen ? 'открыть' : 'свернуть'}
                      </button>
                 </div>
                 </div>
