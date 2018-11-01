@@ -30,12 +30,20 @@ class Programm extends Component {
                 <div>
                     <h3>{programm.title}</h3>  
                 <div className = 'channels'>
+              
                     {array.prog.map(el => 
-                     this.state.isOpen &&
-                     <dl>
+                    el.id < 6 ?
+                    <dl>
                         <div><dt>{el.time}</dt></div>
                         <div><dt>{el.name}</dt></div>
-                    </dl>)
+                    </dl>
+                    :
+                    !this.state.isOpen &&
+                    <dl>
+                        <div><dt>{el.time}</dt></div>
+                        <div><dt>{el.name}</dt></div>
+                    </dl>
+                    )
                     }
                    <button onClick={this.handleClick}>
                             {this.state.isOpen ? 'close' : 'open'}
