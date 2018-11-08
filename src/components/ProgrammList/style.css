@@ -1,7 +1,7 @@
 .programm-list__li {
     list-style: none;
 }
-button {
+.btn {
     background:none!important;
     color:inherit;
     border:none; 
@@ -10,4 +10,17 @@ button {
     /*border is optional*/
     border-bottom:1px solid #444; 
     cursor: pointer;
+}
+.channels {
+    border: 1px solid #ddd;
+    height: 300px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+
+.title {
+    text-align: center;
 }

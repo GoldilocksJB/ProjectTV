@@ -11,11 +11,11 @@ class Programm extends Component {
     componentWillMount() {
     }
 
-    componentWillReceiveProps(nextProps){
-        if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
-           isOpen: nextProps.defaultOpen
-        })
-    }
+    // componentWillReceiveProps(nextProps){
+    //     if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
+    //        isOpen: nextProps.defaultOpen
+    //     })
+    // }
 
     renderTabelItems()
     {
@@ -28,7 +28,7 @@ class Programm extends Component {
             var array = programm
             return (
                 <div>
-                    <h3>{programm.title}</h3>  
+                    <h3 className = 'title'>{programm.title}</h3>  
                 <div className = 'channels'>
               
                     {array.prog.map(el => 
@@ -45,7 +45,7 @@ class Programm extends Component {
                     </dl>
                     )
                     }
-                   <button onClick={this.handleClick}>
+                   <button onClick={this.handleClick} className = 'btn'>
                             {this.state.isOpen ? 'открыть' : 'свернуть'}
                      </button>
                 </div>
