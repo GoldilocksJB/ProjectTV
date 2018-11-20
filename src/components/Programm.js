@@ -29,20 +29,36 @@ class Programm extends Component {
             return (
                 <div>
                     <h3 className = 'title'>{programm.title}</h3>  
-                <div className = 'channels'>
+                <div className = 'channels' class="jumbotron">
               
                     {array.prog.map(el => 
                     el.id < 5 ?
+                    
                     <dl>
-                        <div><dt>{el.time}</dt></div>
-                        <div><dt>{el.name}</dt></div>
+                        
+                        <div className = 'space_left'>
+                            {el.time}
+                        </div>
+                        
+                        
+                        <div>
+                            {el.name}
+                        </div>
+                        
                     </dl>
+                   
                     :
                     !this.state.isOpen &&
+                    
                     <dl>
-                        <div><dt>{el.time}</dt></div>
-                        <div><dt>{el.name}</dt></div>
+                        <div className = 'space_left'>
+                             {el.time}
+                        </div>
+                        <div>
+                            {el.name} 
+                        </div>
                     </dl>
+                    
                     )
                     }
                    <button onClick={this.handleClick} className = 'btn'>

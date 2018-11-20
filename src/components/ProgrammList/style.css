@@ -1,5 +1,8 @@
 .programm-list__li {
     list-style: none;
+    text-align: center;
+    width: 300px;
+    height: 700px;
 }
 .btn {
     background:none!important;
@@ -8,7 +11,7 @@
     padding:0!important;
     font: inherit;
     /*border is optional*/
-    border-bottom:1px solid #444; 
+    border-bottom:2px solid rgb(0, 0, 0); 
     cursor: pointer;
 }
 .channels {
@@ -20,7 +23,19 @@
     width: 300px;
     text-align: center;
   }
-
+.space_left {
+    margin-right: 5%;
+    float: left;
+}
 .title {
     text-align: center;
 }
+
+.anim-appear {
+    opacity: 0.01;
+  }
+   
+  .anim-appear.anim-appear-active{
+    opacity: 2;
+    transition: opacity 5s ease-in;
+  }
